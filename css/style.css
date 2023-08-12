@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progBar {
+  width: 400px;
+  height: 50px;
+  background-color: #ececec;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progBar .bar {
+  position: absolute;
+  height: 100%;
+  background-color: #ffca28;
+  animation: progress 4s normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes progress {
+  0% {width: 0;}
+  100% {width: 100%;}
+}
+
+body {
+    background-image: url(../images/IMG_0865.jpg);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    background-size: cover;
+}
+
+
+.global-menu {
+  display: flex;
+  text-decoration: none;
+}
+
+a {
+  display: block;
+}
+
+.global-menu li {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: #747070;
+}
+
+.global-menu li:hover {
+  opacity: .6;
+  transition: 1s;
+}
+
+.global-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+    font-family: 'Tapestry', cursive;
+    border-width: thin;
+}
+
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+.sns {
+    display: flex;
+    height: 425px;
+}
+
+h3 {
+  text-align: center;
+}
+
+img {
+  width: 260px;
+  height: auto;
+  border-radius: 30%;
+  margin-top: 40px;
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
+    width: 50%;
+    font-family: 'Noto Serif JP', serif;
+}
+
+aside {
+  font-family: 'Noto Serif JP', serif;
+  text-align: center;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+aside li {
+    font-weight: bold;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.intro {
+  margin-top: 80px;
+}
+
+.link a {
+  display: inline;
+  text-decoration: none;
+  color: blue;
+}
+
+.link a:hover {
+  color: orange;
+}
+
+.name {
+  font-family: 'Noto Serif JP', serif;  
+}
+
+
+@media (max-width:1000px) {
+  .sns, .global-menu {
+      flex-direction: column;
+  }
+
+   aside, .global-menu {
+    width: 100%;
+  }
+
+  article, .global-menu {
+    width: auto;
+  }
+
+  aside {
+    text-align: center;
+  }
+
+  .global-menu li {
+    width: inherit;
+  }
+
+  .page-header {
+    text-align: center;
+  }
+
+  footer {
+      background-color: black;
+      color: white;
+      height: 30px;
+  }
+
+  .intro {
+    margin-top: 50px;
+  }
+
+}
